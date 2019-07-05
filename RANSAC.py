@@ -10,6 +10,12 @@ class RANSAC:
         self.error_threshold = 1000
     def set_loop(self, loop):
         self.loop = loop
+    def set_error_threshold(self, threshold):
+        self.error_threshold = threshold
+    def set_inlier_threshold(self, threshold):
+        self.inlier_threshold = threshold
+
+
     def compute_RANSAC(self):
         best_T = None
         inlier = []

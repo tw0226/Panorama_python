@@ -25,15 +25,6 @@ class MatCollection:
         sobely = cv2.Sobel(img, cv2.CV_64F, 0, 1, ksize=3)
         self.gradient_Mat = sobelx, sobely
 
-        # gx_Mat, gy_Mat = np.zeros((height, width)), np.zeros((height, width))
-        # for y in range(1, height-1):
-        #     for x in range(1, width-1):
-        #         grad_x = img[y, x+1] - img[y, x-1]
-        #         grad_y = img[y+1, x] - img[y-1, x]
-        #         gx_Mat[y, x] = grad_x
-        #         gy_Mat[y, x] = grad_y
-        # gx_Mat, gy_Mat = gx_Mat[1:height - 1, 1:width - 1], gy_Mat[1:height - 1, 1:width - 1]
-        #self.gradient_Mat = gx_Mat, gy_Mat
     def calculate_gradient_magnitude(self):
         gx_Mat,gy_Mat = self.gradient_Mat
         height, width = gx_Mat.shape
@@ -81,7 +72,7 @@ class HOG:
             return False
 
     def create_HOG_feature_Map(self):
-        height, width = self.feature_Map.magnitude_Mat.shape
+        height, width = self.feature_Map.get_direction_Mat().shape
         self.HOG_feature_list = []
 
         direction_Mat = self.feature_Map.get_direction_Mat()
