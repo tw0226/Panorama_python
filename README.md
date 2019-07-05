@@ -11,3 +11,4 @@ RANSAC 알고리즘이 랜덤으로 돌기 때문에 변환행렬 T를 구하는
 ![Alt text](/feature_map1.jpg)
 ![Alt text](/feature_map2.jpg)
 ![Alt text](/feature_pair.jpg)
+![Alt text](/panorama.jpg)
