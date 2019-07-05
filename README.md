@@ -6,7 +6,6 @@
 ![Alt text](/feature_map1.jpg)
 ![Alt text](/feature_map2.jpg)
 
-![Alt text](/point_pair_map.jpg)
 ![Alt text](/panorama.jpg)
 
 ## 주의 
